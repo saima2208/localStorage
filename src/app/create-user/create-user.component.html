@@ -1,0 +1,22 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="name">Name:</label><br>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="u.name">
+        </div>
+        <div class="mb-3">
+            <label for="age">Age:</label><br>
+            <input type="number"class="form-control"  id="age" name="age" [(ngModel)]="u.age">
+        </div>
+        <div class="mb-3">
+            <label for="address">Address:</label><br>
+            <input type="text"class="form-control"   id="address" name="address" [(ngModel)]="u.address">
+        </div>
+        <div class="mb-3">
+            <label for="email">Email:</label><br>
+            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="u.email">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+    
