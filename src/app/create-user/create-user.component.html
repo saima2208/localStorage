@@ -1,4 +1,6 @@
 <div class="container">
+    <h1 class="text-bg-success text-center">Registration Form</h1><br>
+    
     <form (ngSubmit)="onSubmit()">
         <div class="mb-3">
             <label for="name">Name:</label><br>
@@ -16,7 +18,8 @@
             <label for="email">Email:</label><br>
             <input type="text" class="form-control" id="email" name="email" [(ngModel)]="u.email">
         </div><br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{ isUpdate? 'Update' :'Submit'}}</button>
     </form>
+
 </div>
     
