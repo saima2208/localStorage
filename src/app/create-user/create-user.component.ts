@@ -31,11 +31,11 @@ export class CreateUserComponent {
   onSubmit() {
     let users: User[] = JSON.parse(localStorage.getItem('users') || '[]');
     if (this.isUpdate) {
-      users = users.map((user) => (user.email == this.u.email ? this.u : user));
+      users = users.map((user) => (user.email == this.u.email? this.u : user));
     } else {
       users.push(this.u);
     }
-
+ 
     localStorage.setItem('users', JSON.stringify(users));
     this.u = new User('', 0, '', '');
     //alert('User added successfully');

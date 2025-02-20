@@ -15,12 +15,14 @@ export class AppComponent {
 }
 
 export class User{
+  
   name: string;
   age: number;
   address: string;
   email: string;
 
-  constructor(name:string, age: number, address:string,email:string){
+  constructor(name: string, age: number, address: string, email: string) {
+   
   this.name= name;
   this.age = age ;
   this.address = address ;

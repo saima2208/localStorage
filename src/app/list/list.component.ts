@@ -13,21 +13,24 @@ export class ListComponent implements OnInit {
   
    users: User[] = [];
 
-   constructor(private router: Router) {}
+    constructor(private router: Router) {}
 
    ngOnInit() {
-    this.users = JSON.parse(localStorage.getItem('users') || '[]');
-   }
-   editUser(user: User) {
-    this.router.navigate(['/create-user'], { state: { user}});
-   }
+     this.users = JSON.parse(localStorage.getItem('users') || '[]');
+    }
+    editUser(user: User) {
+     this.router.navigate(['/create-user'], { state: { user}});
+     }
+
+ 
+
    deleteUser(user: User){
     if (confirm('Are you sure you want to delete this user?')){
       this.users = this.users.filter(u => u !==user);
-      localStorage.setItem('users',JSON.stringify(this.users))
-    }
+       localStorage.setItem('users',JSON.stringify(this.users))
+     }
 
    }
-  }
+   }
 
 
